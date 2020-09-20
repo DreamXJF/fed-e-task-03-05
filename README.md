@@ -35,9 +35,6 @@ Vue 2.x里，是通过 递归 + 遍历 data 对象来实现对数据的监控的
 
 5、Vue.js 3.0 响应式系统的实现原理？
 答：通过 effect  声明依赖响应式数据的函数cb ( 例如视图渲染函数render函数)，并执行cb函数，执行过程中，会触发响应式数据 getter
-
 在响应式数据 getter中进行 track依赖收集：建立 数据&cb 的映射关系存储于 targetMap
-
 当变更响应式数据时，触发 trigger **，**根据 targetMap 找到关联的cb执行
-
-映射关系 targetMap 结构：
+映射关系 targetMap 结构
